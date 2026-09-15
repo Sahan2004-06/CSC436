@@ -8,8 +8,7 @@ pure browser-native code.
 
 ## Live URL
 
-> Replace this with your Netlify URL after deploying:  
-> `https://YOUR-SITE-NAME.netlify.app`
+https://nimble-capybara-2af565.netlify.app
 
 ## What's built here
 

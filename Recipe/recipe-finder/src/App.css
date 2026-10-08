@@ -6,9 +6,9 @@ button { padding: 8px 14px; border-radius: 8px; cursor: pointer; }
 .layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: start; }
 @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }
 .list ul { list-style: none; padding: 0; margin: 0; }
-.list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-bottom: 1px solid #8884; cursor: pointer; border-radius: 6px; }
-.list li:hover, .list li.active { background: #646cff22; }
-.list li span { opacity: .7; }
+.list li.row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-bottom: 1px solid #8884; cursor: pointer; border-radius: 6px; }
+.list li.row:hover, .list li.row.active { background: #646cff22; }
+.list li.row span { opacity: .7; }
 .status { padding: 16px; opacity: .85; }
 .error { color: #e5484d; }
 .detail { border: 1px solid #8884; border-radius: 12px; padding: 16px; }
@@ -22,3 +22,13 @@ button { padding: 8px 14px; border-radius: 8px; cursor: pointer; }
 @media (max-width: 760px) {
   .detail { order: -1; position: static; max-height: none; }
 }
+/* Mission 6: skeleton, updating state, error box */
+.sk { background: linear-gradient(90deg, #8882 25%, #8884 50%, #8882 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: 6px; height: 14px; }
+.sk-name { width: 55%; }
+.sk-cuisine { width: 20%; }
+.skeleton-row { cursor: default; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.updating { opacity: .5; transition: opacity .2s; pointer-events: none; }
+.tag { display: inline-block; font-size: .75rem; padding: 2px 8px; margin-bottom: 8px; border-radius: 999px; background: #646cff; color: #fff; opacity: 1; }
+.error strong { display: block; margin-bottom: 4px; }
+.error button { margin-top: 8px; }
